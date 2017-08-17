@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="585.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewProfileController">
+ <Label fx:id="labelWelcomeMessage" alignment="CENTER" layoutX="10.0" layoutY="42.0" prefHeight="17.0" prefWidth="675.0" text="View Account" wrapText="true">
+		<font>
+			<Font name="System Bold" size="18.0" />
+		</font>
+	</Label>
+	
+	<Label alignment="CENTER_RIGHT" layoutX="13.0" layoutY="110.0" prefHeight="20.0" prefWidth="106.0" text="First Name">
+		<font>
+			<Font size="14.0" />
+		</font>
+	</Label>
+	<TextField fx:id="firstName" disable="true" editable="false" layoutX="155.0" layoutY="110.0" />
+	
+	<Label alignment="CENTER_RIGHT" layoutX="13.0" layoutY="150.0" prefHeight="20.0" prefWidth="106.0" text="Last Name">
+		<font>
+			<Font size="14.0" />
+		</font>
+	</Label>
+	<TextField fx:id="lastName" layoutX="155.0" layoutY="150.0" />
+	
+	<Label alignment="CENTER_RIGHT" layoutX="13.0" layoutY="190.0" prefHeight="20.0" prefWidth="106.0" text="Email Id">
+		<font>
+			<Font size="14.0" />
+		</font>
+	</Label>
+	<TextField fx:id="emailId" layoutX="155.0" layoutY="190.0" />
+	
+	<Label alignment="CENTER_RIGHT" layoutX="13.0" layoutY="230.0" prefHeight="20.0" prefWidth="106.0" text="Gender">
+		<font>
+			<Font size="14.0" />
+		</font>
+	</Label>
+	<TextField fx:id="gender" layoutX="155.0" layoutY="230.0" />
+	
+	<Label alignment="CENTER_RIGHT" layoutX="13.0" layoutY="270.0" prefHeight="20.0" prefWidth="106.0" text="Phone Number">
+		<font>
+			<Font size="14.0" />
+		</font>
+	</Label>
+	<TextField fx:id="phoneNumber" layoutX="155.0" layoutY="270.0" />
+	
+	<Label alignment="CENTER_RIGHT" layoutX="13.0" layoutY="310.0" prefHeight="20.0" prefWidth="106.0" text="Age">
+		<font>
+			<Font size="14.0" />
+		</font>
+	</Label>
+	<TextField fx:id="age" layoutX="155.0" layoutY="310.0" />
+	
+	<Label alignment="CENTER_RIGHT" layoutX="13.0" layoutY="350.0" prefHeight="20.0" prefWidth="106.0" text="Address Line 1">
+		<font>
+			<Font size="14.0" />
+		</font>
+	</Label>
+	<TextField fx:id="addressLine1" layoutX="155.0" layoutY="350.0" />
+	
+	<Label alignment="CENTER_RIGHT" layoutX="13.0" layoutY="390.0" prefHeight="20.0" prefWidth="106.0" text="Address Line 2">
+		<font>
+			<Font size="14.0" />
+		</font>
+	</Label>
+	<TextField fx:id="addressLine2" layoutX="155.0" layoutY="390.0" />
+	
+	<Label alignment="CENTER_RIGHT" layoutX="13.0" layoutY="430.0" prefHeight="20.0" prefWidth="106.0" text="City">
+		<font>
+			<Font size="14.0" />
+		</font>
+	</Label>
+	<TextField fx:id="city" layoutX="155.0" layoutY="430.0" prefHeight="20.0" prefWidth="86.0"/>
+	
+	<Label alignment="CENTER_RIGHT" layoutX="13.0" layoutY="470.0" prefHeight="20.0" prefWidth="106.0" text="State">
+		<font>
+			<Font size="14.0" />
+		</font>
+	</Label>
+	<TextField fx:id="state" layoutX="155.0" layoutY="470.0" />
+	
+	<Label alignment="CENTER_RIGHT" layoutX="13.0" layoutY="510.0" prefHeight="20.0" prefWidth="106.0" text="Zip Code">
+		<font>
+			<Font size="14.0" />
+		</font>
+	</Label>
+	<TextField fx:id="zipCode" layoutX="155.0" layoutY="510.0" />
+	
+   <Label alignment="CENTER_RIGHT" layoutX="13.0" layoutY="550.0" prefHeight="20.0" prefWidth="106.0" text="Licence Number">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <TextField fx:id="licenceNumber" layoutX="155.0" layoutY="550.0" />
+   
+   <Button fx:id="saveButton" layoutX="155.0" layoutY="600.0" mnemonicParsing="false" onAction="#updateProfileDetails" prefHeight="39.0" prefWidth="96.0" text="Update">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Button>
+   
+   <Button fx:id="resetButton" layoutX="275.0" layoutY="600.0" mnemonicParsing="false" onAction="#resetAllFields" prefHeight="39.0" prefWidth="96.0" text="Reset">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Button>
+   
+    <Button fx:id="deactivateButton" layoutX="395.0" layoutY="600.0" mnemonicParsing="false" onAction="#deactivateAccount" prefHeight="39.0" prefWidth="116.0" text="Deactivate">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Button>
+   
+   <Button fx:id="exitButton" layoutX="535.0" layoutY="600.0" mnemonicParsing="false" onAction="#ExitForm" prefHeight="39.0" prefWidth="96.0" text="Exit">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Button>
+   
+   <Separator layoutY="660.0" prefHeight="4.0" prefWidth="700.0" />
+   
+</AnchorPane>

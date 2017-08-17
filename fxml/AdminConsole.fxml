@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0"
+	xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controller.AdminController">
+	<MenuBar prefHeight="31.0" prefWidth="700.0">
+		<menus>
+			<Menu mnemonicParsing="false" text="Account Settings">
+				<items>
+					<MenuItem fx:id="activateAccount" mnemonicParsing="false"
+						onAction="#handleButtonAction" text="Activate Account" />
+				</items>
+			</Menu>
+			<Menu mnemonicParsing="false" text="Release Car">
+				<items>
+					<MenuItem fx:id="releaseCar" mnemonicParsing="false"
+						onAction="#handleButtonAction" text="Release" />
+				</items>
+			</Menu>
+		</menus>
+	</MenuBar>
+	<Label fx:id="welcomeMessage" layoutX="399.0" layoutY="31.0"
+		prefHeight="31.0" prefWidth="216.0"
+		textAlignment="RIGHT" wrapText="true">
+		<font>
+			<Font size="18.0" />
+		</font>
+	</Label>
+	<Button fx:id="exitButton" layoutX="675.0" mnemonicParsing="false" onAction="#ExitForm" prefHeight="31.0" prefWidth="24.0" text="X" />
+</AnchorPane>

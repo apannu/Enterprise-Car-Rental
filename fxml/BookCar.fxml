@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/8.0.60" 
+xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookCarController">
+	<Label fx:id="welcomeMessage" alignment="CENTER" layoutX="75.0" layoutY="42.0" prefHeight="17.0" 
+	prefWidth="675.0" text="Please select pickup and dropoff dates. Click on Search." wrapText="true">
+		<font>
+			<Font name="System Bold" size="16.0" />
+		</font>
+	</Label>
+	
+	<Label alignment="CENTER_RIGHT" layoutX="13.0" layoutY="135.0" prefHeight="20.0" prefWidth="106.0" text="PickUp Date">
+		<font>
+			<Font size="14.0" />
+		</font>
+	</Label>
+	<DatePicker fx:id="pickupDate" disable="false" editable="false" layoutX="175.0" layoutY="130.0" prefWidth="150.0"/>
+	
+	<Label alignment="CENTER_RIGHT" layoutX="360.0" layoutY="135.0" prefHeight="20.0" prefWidth="106.0" text="Dropoff Date">
+		<font>
+			<Font size="14.0" />
+		</font>
+	</Label>
+	<DatePicker fx:id="dropoffDate" disable="false" editable="false" layoutX="502.0" layoutY="130.0" prefWidth="150.0"/>
+	
+	<Button fx:id="searchButton" layoutX="710.0" layoutY="125.0" mnemonicParsing="false" onAction="#initDateSearch" 
+	prefHeight="39.0" prefWidth="96.0" text="Search">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Button>
+   
+   <Label fx:id = "pickupTimeLabel" alignment="CENTER_RIGHT" visible = "false" layoutX="13.0" layoutY="180.0" 
+   prefHeight="20.0" prefWidth="106.0" text="Pickup Time">
+		<font>
+			<Font size="14.0" />
+		</font>
+	</Label>
+    <ComboBox fx:id="pickupTime" layoutX="175.0" layoutY="180.0" prefWidth="150.0" visible = "false" promptText="Select" visibleRowCount="10">
+	</ComboBox>
+	
+	<Label fx:id = "dropoffTimeLabel" alignment="CENTER_RIGHT" visible = "false" layoutX="363.0" layoutY="185.0" 
+	prefHeight="20.0" prefWidth="106.0" text="Dropoff Time">
+		<font>
+			<Font size="14.0" />
+		</font>
+	</Label>
+	 <ComboBox fx:id="dropoffTime" layoutX="502.0" layoutY="180.0" prefWidth="150.0" visible = "false" 
+	 promptText="Select" visibleRowCount="10">
+	</ComboBox>
+	
+	<Label fx:id="labelTableView" alignment="CENTER" layoutX="45.0" layoutY="230.0" prefHeight="17.0" 
+	prefWidth="675.0" text="Click on the row to proceed for the payment." wrapText="true">
+		<font>
+			<Font name="System Bold" size="16.0" />
+		</font>
+	</Label>
+	
+   <TableView fx:id="tableView" layoutX="40.0" layoutY="270.0" prefHeight="381.0" prefWidth="630.0">
+     <columns>
+       <TableColumn fx:id="carName" prefWidth="110.0" text="Car Name" />
+         <TableColumn fx:id="carType" prefWidth="105.0" text="Car Type" />
+         <TableColumn fx:id="availableDate" prefWidth="175.0" text="Available Date" />
+         <TableColumn fx:id="availableTime" prefWidth="120.0" text="Available Time" />
+          <TableColumn fx:id="rate" prefWidth="120.0" text="Rate Per Hour" />
+          <TableColumn fx:id="availableId" prefWidth="120.0" text="A" visible = "false"/>
+     </columns>
+   </TableView>
+   
+   <Button fx:id="exitButton" layoutX="810.0" mnemonicParsing="false" onAction="#ExitForm" prefHeight="31.0" prefWidth="24.0" text="X" />
+   
+   <Label layoutX="20.0" layoutY="680.0" visible = "false" text="Mandatory Fields">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   
+</AnchorPane>
